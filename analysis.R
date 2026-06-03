@@ -2,7 +2,13 @@
 #No external packages used 
 
 #Initial analysis
+#The CSV file should be placed in the same folder as this script
 list.files()
-dengue <- read.csv("data/dengue_assignment.csv")
+dengue <- read.csv("dengue_assignment.csv")
 names(dengue)
-sum(dengue$case_number[dengue$year == 2023], na.rm = TRUE)
+
+#Calculate cases 
+cases_2023 <- sum(dengue$case_number[dengue$year == 2023], na.rm = TRUE)
+
+#Print result
+print(cases_2023)
