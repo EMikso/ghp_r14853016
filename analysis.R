@@ -5,5 +5,4 @@
 list.files()
 dengue <- read.csv("data/dengue_assignment.csv")
 names(dengue)
-sum(dengue$year == 2023)
-
+sum(dengue$case_number[dengue$year == 2023], na.rm = TRUE)
